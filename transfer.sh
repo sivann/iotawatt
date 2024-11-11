@@ -1,6 +1,7 @@
 #!/bin/bash
 
-# Run every hour
+# Run every hour via cron
+
 # Read data from iotawatt, save to output.txt
 iolog2zbx.py --begin 's-1h' --period 1
 
