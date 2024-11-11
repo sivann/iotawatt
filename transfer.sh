@@ -2,6 +2,9 @@
 
 # Run every hour via cron
 
+SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
+
+PATH=$SCRIPT_DIR:$PATH
 # Read data from iotawatt, save to output.txt
 iolog2zbx.py --begin 's-1h' --period 1
 
